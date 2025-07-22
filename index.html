@@ -14,9 +14,9 @@
 
     <style>
         /* Hero Section Style */
-      body{
-        font-family: 'Whitney', Georgia, 'Times New Roman', Times, serif;
-      }
+        body {
+            font-family: 'Whitney', Georgia, 'Times New Roman', Times, serif;
+        }
 
 
         .hero {
@@ -31,11 +31,12 @@
             text-align: center;
             margin-top: -60px;
         }
-        .hero h1{
+
+        .hero h1 {
             font-size: 70px;
         }
 
-         .hero p{
+        .hero p {
             font-size: 20px;
         }
 
@@ -59,7 +60,7 @@
         .mainheader {
             position: sticky;
             top: 0;
-            background: #00000052  !important;
+            background: #00000052 !important;
             box-shadow: none;
             z-index: 10;
         }
@@ -108,57 +109,127 @@
         }
 
 
-        .barista .mb-4{
+        .barista .mb-4 {
             margin-bottom: 2.5rem !important;
         }
 
         .barista li {
             text-align: start;
         }
-                ul {
-            list-style-type: none;  /* Remove default bullets */
-            padding-left: 0;  /* Remove left padding */
+
+        ul {
+            list-style-type: none;
+            /* Remove default bullets */
+            padding-left: 0;
+            /* Remove left padding */
         }
 
         .barista li {
-            padding-left: 25px;  /* Space for the icon */
+            padding-left: 25px;
+            /* Space for the icon */
             font-size: 20px;
             position: relative;
         }
 
-         .barista li::before {
+        .barista li::before {
             content: "🟔";
             position: absolute;
             left: 0;
             top: 35%;
             transform: translateY(-50%);
-            width: 20px;  /* Set width of the icon */
-            height: 20px;  /* Set height of the icon */
-            background-image: url('https://cdn.jsdelivr.net/npm/flat-icons/dist/icons/your-icon.svg');  /* Replace with the URL to your icon */
+            width: 20px;
+            /* Set width of the icon */
+            height: 20px;
+            /* Set height of the icon */
+            background-image: url('https://cdn.jsdelivr.net/npm/flat-icons/dist/icons/your-icon.svg');
+            /* Replace with the URL to your icon */
             background-size: cover;
         }
 
 
-        .table td,.table th {
-           padding: 2em;
+        .table td,
+        .table th {
+            padding: 2%;
         }
 
-      
-        .table .table_th{
+
+        .table .table_th {
             background-color: #755445 !important;
             color: white;
         }
 
-        .table .name  {
+        .table .name {
             background-color: #aa8b7c4d !important;
+            color: rgb(0, 0, 0);
+        }
+
+        .table td {
+            background-color: #ffffffb0 !important;
             color: rgb(0, 0, 0);
         }
 
 
 
-        .video-sec{
-            background-color: #fff1e9;
+        .table .chbox {
+            color: #10ac84 !important;
         }
+
+
+
+
+
+        .Contact {
+            background-image: url(https://coffeeport.ca/wp-content/uploads/2024/11/new-new-h1-bacground-img-3.jpg);
+        }
+
+        .why_choose {
+            background-image: url(https://i0.wp.com/sociallover.net/wp-content/uploads/2018/12/wood5.png?w=1000&ssl=1);
+            background-attachment: fixed;
+            /* Parallax effect */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            /* Make the section take the full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px;
+        }
+
+
+        .form-check-input:disabled {
+            border-color: #333;
+            background-color: #d7d7d7;
+        }
+
+        .form-check-input:checked {
+            background-color: #4c4846;
+            border-color: #000000;
+        }
+
+        .btn-primary{
+            background-color: #a18571;
+            border-color: #a18571;
+        }
+
+        .video-sec {
+                background-image: url(https://static.vecteezy.com/system/resources/previews/000/133/727/non_2x/vector-wood-planks-background.jpg);
+            background-attachment: fixed;
+            /* Parallax effect */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            /* Make the section take the full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px;
+        }
+
         /* Enhanced Timeline Styles */
         .timeline {
             position: relative;
@@ -256,13 +327,14 @@
         }
 
         .timeline-content h3 {
-            color: #667eea;
+            color: #896844;
             font-weight: 700;
             font-size: 1.4rem;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 10px;
         }
 
 
@@ -323,16 +395,21 @@
         @media (max-width: 768px) {
 
 
-            .hero h1{
+            .hero h1 {
                 margin-top: 20%;
                 font-size: 50px;
                 margin-bottom: 7%;
             }
 
-            .hero .btn-light{
+            .hero .btn-light {
                 margin-top: 10%;
             }
-            
+
+            .table .name,
+            .table .table_th {
+                font-size: 10px;
+            }
+
             .timeline::before {
                 left: 30px;
             }
@@ -340,8 +417,20 @@
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
                 justify-content: flex-start;
-                padding-left: 70px;
-                padding-right: 20px;
+                padding-left: 12%;
+                padding-right: 4%;
+            }
+
+            .timeline-content {
+                background: white;
+                border-radius: 15px;
+                padding: 5px;
+                width: 100%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                position: relative;
+                transition: all 0.4s ease;
+                border: 2px solid transparent;
+                background-clip: padding-box;
             }
 
             .timeline-item:nth-child(odd) .timeline-content,
@@ -406,7 +495,7 @@
     <section class="hero mb-5">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1 >Welcome to Our Website</h1>
+            <h1>Welcome to Our Website</h1>
             <p>Your journey starts here. Explore our amazing features!</p>
             <a href="#" class="btn btn-light">Get Started</a>
         </div>
@@ -432,18 +521,18 @@
     </section>
 
     <!-- Watch Our Video Section -->
-     <div class="video-sec">
-    <section class="container py-4 text-center mt-5 ">
-        <h1 class="py-3">Watch Our Video</h1>
-        <div class="embed-responsive mt-5">
-            <iframe class="embed-responsive-item w-100"
-                src="https://www.youtube.com/embed/FVENtXoc1zs?si=9SAAxKtjrvZi2Aa6" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+    <div class="video-sec">
+        <section class="container py-4 text-center mt-5 ">
+            <h1 class="py-3">Watch Our Video</h1>
+            <div class="embed-responsive mt-5">
+                <iframe class="embed-responsive-item w-100"
+                    src="https://www.youtube.com/embed/FVENtXoc1zs?si=9SAAxKtjrvZi2Aa6" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
     </div>
 
     <!-- Second Owl Carousel Section -->
@@ -493,7 +582,7 @@
                 <div class="timeline-item">
                     <div class="timeline-circle"></div>
                     <div class="timeline-content text-center">
-                        <img src="./images/timeline/2.png"  width="100%">
+                        <img src="./images/timeline/2.png" width="100%">
                         <p>We use real time data to monitor the machines. This allows our service team to evaluate the
                             stock levels and even the beverage temperature providing the best customer experience 24x7.
                         </p>
@@ -504,7 +593,7 @@
                 <div class="timeline-item">
                     <div class="timeline-circle"></div>
                     <div class="timeline-content text-center">
-                        <img src="./images/timeline/3.png"  width="100%">
+                        <img src="./images/timeline/3.png" width="100%">
                         <p>The machine provides 15+ beverages at your fingerprint.</p>
                     </div>
                 </div>
@@ -513,7 +602,7 @@
                 <div class="timeline-item">
                     <div class="timeline-circle"></div>
                     <div class="timeline-content text-center">
-                        <img src="./images/timeline/4.jpg"  width="100%">
+                        <img src="./images/timeline/4.jpg" width="100%">
                         <p>First time in Canada to provide this high technology coffee vending machines. Never worry
                             about cleaning the coffee pot, buying supplies or brewing coffee. We take care of
                             everything.We work with the highest technology in the industry</p>
@@ -524,64 +613,81 @@
     </section>
 
 
-
-    <section class="container py-4 text-center mt-5 mb-5">
-        <h1 class="py-3">Why choose us</h1>
-        <table class="table table-bordered text-center mt-5">
-            <thead class="table">
-                <tr class="table_th">
-                    <th  scope="col"></th>
-                    <th scope="table_th">Coffee Port</th>
-                    <th scope="table_th">Table Top Coffee Pot</th>
-                    <th scope="table_th">Cafeteria</th>
-                    <th scope="table_th">Coffee Shop</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="name">Freshly Ground Coffee</th>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" checked disabled></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="name">Perfect Temperature</th>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" checked disabled></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="name">24x7 Access</th>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="name">15+ Hot Beverages</th>
-                    <td><input type="checkbox" checked disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                    <td><input type="checkbox" disabled></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="name">Time to Get to the location</th>
-                    <td>1 mins</td>
-                    <td>1 mins</td>
-                    <td>5 mins</td>
-                    <td>15-20 mins</td>
-                </tr>
-                <tr>
-                    <th scope="row" class="name">Time to get a coffee</th>
-                    <td>50 secs</td>
-                    <td>3 mins</td>
-                    <td>5 mins</td>
-                    <td>5 mins</td>
-                </tr>
-            </tbody>
-        </table>
+    <section class="why_choose">
+        <section class="container py-4 text-center mt-5 mb-5">
+            <h1 class="py-3">Why choose us</h1>
+            <table class="table table-bordered text-center mt-5">
+                <thead class="table">
+                    <tr class="table_th">
+                        <th scope="col"></th>
+                        <th scope="table_th">Coffee Port</th>
+                        <th scope="table_th">Table Top Coffee Pot</th>
+                        <th scope="table_th">Cafeteria</th>
+                        <th scope="table_th">Coffee Shop</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="name">Freshly Ground Coffee</th>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="name">Perfect Temperature</th>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="name">24x7 Access</th>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="name">15+ Hot Beverages</th>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
+                                checked disabled></td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="name">Time to Get to the location</th>
+                        <td>1 mins</td>
+                        <td>1 mins</td>
+                        <td>5 mins</td>
+                        <td>15-20 mins</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="name">Time to get a coffee</th>
+                        <td>50 secs</td>
+                        <td>3 mins</td>
+                        <td>5 mins</td>
+                        <td>5 mins</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
 
 
@@ -594,18 +700,68 @@
             </div>
             <div class="col-md-6">
                 <ul>
-                    <li class="mb-4">Swiss made coffee grinder and brewer which give you an ultimate coffee experience</li>
-                     <li class="mb-4">Coffee beans pre soaking option</li>
-                     <li class="mb-4">Brew at 9 bar and precise temperarure control.</li>
-                     <li class="mb-4">In-built cupa and lid dispenser</li>
-                     <li class="mb-4">22″ full touch screen with an ability of showcasing your advertisements</li>
-                     <li class="mb-4">Self cleaninig mechanism</li>
-                     <li class="mb-4">Cash* or cashless payment methods, face recognition.</li>
-                     <li class="mb-4">Machine is monitored remotely for material levels</li>
+                    <li class="mb-4">Swiss made coffee grinder and brewer which give you an ultimate coffee experience
+                    </li>
+                    <li class="mb-4">Coffee beans pre soaking option</li>
+                    <li class="mb-4">Brew at 9 bar and precise temperarure control.</li>
+                    <li class="mb-4">In-built cupa and lid dispenser</li>
+                    <li class="mb-4">22″ full touch screen with an ability of showcasing your advertisements</li>
+                    <li class="mb-4">Self cleaninig mechanism</li>
+                    <li class="mb-4">Cash* or cashless payment methods, face recognition.</li>
+                    <li class="mb-4">Machine is monitored remotely for material levels</li>
                 </ul>
             </div>
 
     </section>
+
+
+
+
+    <section class=" Contact">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Left Column: Contact Info and Image -->
+                <div class="col-md-6">
+                    <h2>Request For A Call</h2>
+                    <p><strong>Call us on:</strong> 437 771 7443</p>
+                    <p><strong>Email us on:</strong> <a
+                            href="mailto:info.coffeeport@gmail.com">info.coffeeport@gmail.com</a></p>
+
+                    <img src="https://coffeeport.ca/wp-content/uploads/2024/11/Untitled-design-27.png" width="70%"
+                        class="img-fluid" alt="Coffee Port Image">
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="col-md-6">
+                    <form>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-40">Submit Form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -619,54 +775,54 @@
     <script>
         // Initialize First Carousel
         $(document).ready(function () {
-    $("#carousel-one").owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        dots: true,
-        responsive: {
-            0: {
-                items: 2 // Mobile
-            },
-            600: {
-                items: 2 // Small tablets
-            },
-            768: {
-                items: 3 // Tablets
-            },
-            992: {
-                items: 4 // Desktops
-            }
-        }
-    });
+            $("#carousel-one").owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 40,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 2 // Mobile
+                    },
+                    600: {
+                        items: 2 // Small tablets
+                    },
+                    768: {
+                        items: 3 // Tablets
+                    },
+                    992: {
+                        items: 3 // Desktops
+                    }
+                }
+            });
 
-    $("#carousel-two").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        dots: false,
-        responsive: {
-            0: {
-                items: 2 // Mobile
-            },
-            600: {
-                items: 2 // Small tablets
-            },
-            768: {
-                items: 2 // Tablets
-            },
-            992: {
-                items: 3 // Desktops
-            }
-        }
-    });
-});
+            $("#carousel-two").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 2 // Mobile
+                    },
+                    600: {
+                        items: 2 // Small tablets
+                    },
+                    768: {
+                        items: 2 // Tablets
+                    },
+                    992: {
+                        items: 3 // Desktops
+                    }
+                }
+            });
+        });
 
 
 
