@@ -139,6 +139,22 @@
         }
 
 
+        .table td,.table th {
+           padding: 2em;
+        }
+
+      
+        .table .table_th{
+            background-color: #755445 !important;
+            color: white;
+        }
+
+        .table .name  {
+            background-color: #aa8b7c4d !important;
+            color: rgb(0, 0, 0);
+        }
+
+
 
         .video-sec{
             background-color: #fff1e9;
@@ -305,6 +321,18 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
+
+            .hero h1{
+                margin-top: 20%;
+                font-size: 50px;
+                margin-bottom: 7%;
+            }
+
+            .hero .btn-light{
+                margin-top: 10%;
+            }
+            
             .timeline::before {
                 left: 30px;
             }
@@ -338,7 +366,7 @@
             }
 
             .timeline-item.animate .timeline-circle {
-                transform: translateX(-50%) scale(1.1);
+                transform: translateX(-100%) scale(1.1);
             }
         }
     </style>
@@ -500,53 +528,53 @@
     <section class="container py-4 text-center mt-5 mb-5">
         <h1 class="py-3">Why choose us</h1>
         <table class="table table-bordered text-center mt-5">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Coffee Port</th>
-                    <th scope="col">Table Top Coffee Pot</th>
-                    <th scope="col">Cafeteria</th>
-                    <th scope="col">Coffee Shop</th>
+            <thead class="table">
+                <tr class="table_th">
+                    <th  scope="col"></th>
+                    <th scope="table_th">Coffee Port</th>
+                    <th scope="table_th">Table Top Coffee Pot</th>
+                    <th scope="table_th">Cafeteria</th>
+                    <th scope="table_th">Coffee Shop</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Freshly Ground Coffee</th>
+                    <th scope="row" class="name">Freshly Ground Coffee</th>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" checked disabled></td>
                 </tr>
                 <tr>
-                    <th scope="row">Perfect Temperature</th>
+                    <th scope="row" class="name">Perfect Temperature</th>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" checked disabled></td>
                 </tr>
                 <tr>
-                    <th scope="row">24x7 Access</th>
+                    <th scope="row" class="name">24x7 Access</th>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" disabled></td>
                 </tr>
                 <tr>
-                    <th scope="row">15+ Hot Beverages</th>
+                    <th scope="row" class="name">15+ Hot Beverages</th>
                     <td><input type="checkbox" checked disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" disabled></td>
                     <td><input type="checkbox" disabled></td>
                 </tr>
                 <tr>
-                    <th scope="row">Time to Get to the location</th>
+                    <th scope="row" class="name">Time to Get to the location</th>
                     <td>1 mins</td>
                     <td>1 mins</td>
                     <td>5 mins</td>
                     <td>15-20 mins</td>
                 </tr>
                 <tr>
-                    <th scope="row">Time to get a coffee</th>
+                    <th scope="row" class="name">Time to get a coffee</th>
                     <td>50 secs</td>
                     <td>3 mins</td>
                     <td>5 mins</td>
@@ -591,27 +619,55 @@
     <script>
         // Initialize First Carousel
         $(document).ready(function () {
-            $("#carousel-one").owlCarousel({
-                items: 4,
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                dots: true
-            });
+    $("#carousel-one").owlCarousel({
+        items: 4,
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        dots: true,
+        responsive: {
+            0: {
+                items: 2 // Mobile
+            },
+            600: {
+                items: 2 // Small tablets
+            },
+            768: {
+                items: 3 // Tablets
+            },
+            992: {
+                items: 4 // Desktops
+            }
+        }
+    });
 
-            // Initialize Second Carousel
-            $("#carousel-two").owlCarousel({
-                items: 3,
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 2500,
-                dots: false
-            });
-        });
+    $("#carousel-two").owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        dots: false,
+        responsive: {
+            0: {
+                items: 2 // Mobile
+            },
+            600: {
+                items: 2 // Small tablets
+            },
+            768: {
+                items: 2 // Tablets
+            },
+            992: {
+                items: 3 // Desktops
+            }
+        }
+    });
+});
+
 
 
 
