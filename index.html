@@ -11,6 +11,8 @@
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Hero Section Style */
@@ -29,7 +31,7 @@
             align-items: center;
             color: white;
             text-align: center;
-            margin-top: -60px;
+            margin-top: -200px;
         }
 
         .hero h1 {
@@ -42,6 +44,7 @@
 
         .overlay {
             position: absolute;
+            margin-top: -50px;
             top: 0;
             left: 0;
             width: 100%;
@@ -65,6 +68,10 @@
             z-index: 10;
         }
 
+        .mobile-menu-sec {
+            display: none;
+        }
+
         .navbar.navbar-light .navbar-nav .nav-link {
             color: white;
         }
@@ -74,9 +81,14 @@
         }
 
         .navbar li {
-            padding: 2px 12px;
+            padding: 2px 15px;
+            font-size: 20px;
         }
 
+        .mobile-logo{
+            position: absolute;
+            display: none;
+        }
         .login-btn {
             color: white;
             border-color: white;
@@ -117,6 +129,10 @@
             text-align: start;
         }
 
+        .barista .fa-check-square {
+            margin-right: 20px;
+        }
+
         ul {
             list-style-type: none;
             /* Remove default bullets */
@@ -131,20 +147,6 @@
             position: relative;
         }
 
-        .barista li::before {
-            content: "🟔";
-            position: absolute;
-            left: 0;
-            top: 35%;
-            transform: translateY(-50%);
-            width: 20px;
-            /* Set width of the icon */
-            height: 20px;
-            /* Set height of the icon */
-            background-image: url('https://cdn.jsdelivr.net/npm/flat-icons/dist/icons/your-icon.svg');
-            /* Replace with the URL to your icon */
-            background-size: cover;
-        }
 
 
         .table td,
@@ -169,14 +171,28 @@
         }
 
 
-
-        .table .chbox {
-            color: #10ac84 !important;
+        .owl-theme .owl-nav {
+            text-align: end;
+            -webkit-tap-highlight-color: transparent;
         }
 
+        .owl-theme button{
+            background-color: #70320980 !important;
+            width: 30px;
+            height: 40px;
+        }
 
+        .owl-theme button span{
+            color: white !important;
+            font-size: 25px;
+           
+        }
+        
 
-
+        .offcanvas{
+            background-color: #68320f;
+            width: 80% !important;
+        }
 
         .Contact {
             background-image: url(https://coffeeport.ca/wp-content/uploads/2024/11/new-new-h1-bacground-img-3.jpg);
@@ -209,13 +225,13 @@
             border-color: #000000;
         }
 
-        .btn-primary{
+        .btn-primary {
             background-color: #a18571;
             border-color: #a18571;
         }
 
         .video-sec {
-                background-image: url(https://static.vecteezy.com/system/resources/previews/000/133/727/non_2x/vector-wood-planks-background.jpg);
+            background-image: url(https://static.vecteezy.com/system/resources/previews/000/133/727/non_2x/vector-wood-planks-background.jpg);
             background-attachment: fixed;
             /* Parallax effect */
             background-position: center;
@@ -242,7 +258,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(180deg, #854305 0%, #b97002 50%, #facc00 100%);
             transform: translateX(-50%);
             border-radius: 2px;
             box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
@@ -323,7 +339,7 @@
         .timeline-content:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            border-color: #667eea;
+            border-color: #ff3d022c;
         }
 
         .timeline-content h3 {
@@ -350,7 +366,7 @@
             position: absolute;
             width: 24px;
             height: 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #68320f 0%, #bd673f 100%);
             border: 4px solid white;
             border-radius: 50%;
             left: 50%;
@@ -368,28 +384,79 @@
 
         /* Color progression effect */
         .timeline-item:nth-child(1) .timeline-circle {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
 
         .timeline-item:nth-child(2) .timeline-circle {
-            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
 
         .timeline-item:nth-child(3) .timeline-circle {
-            background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
 
         .timeline-item:nth-child(4) .timeline-circle {
-            background: linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
 
         .timeline-item:nth-child(5) .timeline-circle {
-            background: linear-gradient(135deg, #a55eea 0%, #8e44ad 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
 
         .timeline-item:nth-child(6) .timeline-circle {
-            background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+            background: linear-gradient(135deg, #683709 0%, #a73810 100%);
         }
+
+
+        @media (max-width:1360px) {
+            .navbar li {
+                padding: 2px 5px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width:1200px) {
+            .navbar li {
+                padding: 2px 5px;
+                font-size: 12px;
+            }
+
+            .mainheader {
+                display: block;
+            }
+        }
+
+
+        @media (max-width:992px) {
+            .mobile-menu-sec {
+                display: flex;
+                position: absolute;
+                z-index: 1000;
+                justify-content: end;
+                right: 5%;
+                top: 3%;
+
+            }
+
+            .overlay {
+                margin-top: 0px;
+
+            }
+
+
+            .mainheader {
+                display: none;
+            }
+
+
+            .hero {
+                margin-top: 0px;
+            }
+
+        }
+
+
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -465,31 +532,82 @@
 
     <!-- Sticky Header -->
     <nav class="navbar navbar-expand-lg navbar-light mainheader">
-        <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/images/logo.png" alt="Coffee Port Logo" width="150">
+            </a>
+
+
+            <!-- pc menu -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Advantages</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">The Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Options</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Machine Specs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+
+
                 </ul>
                 <button class="btn btn-outline-light login-btn">Login</button>
             </div>
         </div>
     </nav>
+
+
+
+<img src="/images/logo.png" alt="Coffee Port Logo" width="150" class="mobile-logo">
+
+    <section class="mobile-menu-sec">
+
+        
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
 
     <!-- Hero Section -->
     <section class="hero mb-5">
@@ -497,7 +615,7 @@
         <div class="hero-content">
             <h1>Welcome to Our Website</h1>
             <p>Your journey starts here. Explore our amazing features!</p>
-            <a href="#" class="btn btn-light">Get Started</a>
+            <a href="#" class="btn btn-light">Request for Samples</a>
         </div>
     </section>
 
@@ -700,15 +818,22 @@
             </div>
             <div class="col-md-6">
                 <ul>
-                    <li class="mb-4">Swiss made coffee grinder and brewer which give you an ultimate coffee experience
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Swiss made coffee grinder and
+                        brewer which give you an ultimate coffee experience
                     </li>
-                    <li class="mb-4">Coffee beans pre soaking option</li>
-                    <li class="mb-4">Brew at 9 bar and precise temperarure control.</li>
-                    <li class="mb-4">In-built cupa and lid dispenser</li>
-                    <li class="mb-4">22″ full touch screen with an ability of showcasing your advertisements</li>
-                    <li class="mb-4">Self cleaninig mechanism</li>
-                    <li class="mb-4">Cash* or cashless payment methods, face recognition.</li>
-                    <li class="mb-4">Machine is monitored remotely for material levels</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Coffee beans pre soaking
+                        option</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Brew at 9 bar and precise
+                        temperarure control.</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>In-built cupa and lid
+                        dispenser</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>22″ full touch screen with an
+                        ability of showcasing your advertisements</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Self cleaninig mechanism</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Cash* or cashless payment
+                        methods, face recognition.</li>
+                    <li class="mb-4"><i class="fa fa-check-square" aria-hidden="true"></i>Machine is monitored remotely
+                        for material levels</li>
                 </ul>
             </div>
 
@@ -722,9 +847,9 @@
             <div class="row">
                 <!-- Left Column: Contact Info and Image -->
                 <div class="col-md-6">
-                    <h2>Request For A Call</h2>
-                    <p><strong>Call us on:</strong> 437 771 7443</p>
-                    <p><strong>Email us on:</strong> <a
+                    <h1 class="mb-5">Request For A Call</h1>
+                    <p class="mt-2"><strong>Call us on:</strong> 437 771 7443</p>
+                    <p class="mt-2"><strong>Email us on:</strong> <a
                             href="mailto:info.coffeeport@gmail.com">info.coffeeport@gmail.com</a></p>
 
                     <img src="https://coffeeport.ca/wp-content/uploads/2024/11/Untitled-design-27.png" width="70%"
@@ -782,7 +907,7 @@
                 nav: true,
                 autoplay: true,
                 autoplayTimeout: 3000,
-                dots: true,
+                dots: false,
                 responsive: {
                     0: {
                         items: 2 // Mobile
